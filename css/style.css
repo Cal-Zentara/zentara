@@ -110,6 +110,22 @@ img, video { max-width: 100%; display: block; }
 #glow { position: fixed; top: 0; left: 0; width: 460px; height: 460px; border-radius: 50%; pointer-events: none; z-index: 4; background: radial-gradient(circle, rgba(123,79,201,.12), transparent 65%); transform: translate(-50%, -50%); mix-blend-mode: screen; will-change: transform; }
 @media (hover: none), (prefers-reduced-motion: reduce) { #glow { display: none; } }
 
+/* ---------- Background atmosphere ---------- */
+#grain { position: fixed; inset: 0; z-index: 60; pointer-events: none; opacity: .05; }
+#grain::before { content: ''; position: absolute; inset: -100%; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)' opacity='0.9'/%3E%3C/svg%3E"); animation: grainShift 1.4s steps(4) infinite; }
+@keyframes grainShift { 0% { transform: translate(0,0); } 25% { transform: translate(-3%,2%); } 50% { transform: translate(2%,-3%); } 75% { transform: translate(-2%,-2%); } 100% { transform: translate(0,0); } }
+.lamp { position: absolute; width: 70vw; height: 70vw; max-width: 900px; max-height: 900px; border-radius: 50%; pointer-events: none; filter: blur(10px); animation: lampBreathe 9s var(--ease) infinite alternate; }
+.lamp-purple { background: radial-gradient(circle, rgba(123,79,201,.09), transparent 62%); }
+.lamp-gold { background: radial-gradient(circle, rgba(201,162,39,.06), transparent 62%); }
+@keyframes lampBreathe { from { opacity: .65; transform: scale(.92); } to { opacity: 1; transform: scale(1.06); } }
+#problem, #work, #services, #story, #contact { position: relative; overflow: hidden; }
+#problem .lamp { top: -20%; right: -25%; }
+#work .lamp { bottom: -30%; left: -20%; animation-delay: 2s; }
+#services .lamp { top: -15%; left: 55%; animation-delay: 4s; }
+#story .lamp { top: 10%; right: -30%; animation-delay: 1s; }
+#contact .lamp { top: -10%; left: -15%; animation-delay: 3s; }
+#problem > :not(.lamp), #work > :not(.lamp), #services > :not(.lamp), #story > :not(.lamp), #contact > :not(.lamp) { position: relative; }
+
 /* reveal utility */
 .word, .sub, .cta, .reveal { opacity: 0; transform: translateY(24px); transition: opacity .4s var(--ease), transform .4s var(--ease); }
 .in { opacity: 1; transform: none; }
