@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zentara — How we work</title>
+<meta name="description" content="What happens when you hand your marketing to Zentara. Seven simple steps. You run your business, we do the rest.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Archivo:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#0B0A0D; --cream:#F4EADE; --purple:#7B4FC9; --gold:#C9A227;
+  --serif:'Playfair Display',Georgia,serif; --sans:'Archivo',system-ui,sans-serif;
+  --ease:cubic-bezier(0.16,1,0.3,1);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--black);color:var(--cream);font-family:var(--sans);font-weight:300;line-height:1.6;overflow-x:hidden;}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.1;}
+img{max-width:100%;display:block;}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;}}
+
+/* header */
+.top{display:flex;justify-content:space-between;align-items:center;padding:1.75rem clamp(1.25rem,6vw,6rem);position:relative;z-index:2;}
+.brand{display:flex;align-items:center;gap:.7rem;}
+.brand-name{font-family:var(--serif);letter-spacing:.38em;font-size:.85rem;padding-left:.38em;}
+.z-mark{height:38px;width:auto;}
+.slogan{color:var(--gold);font-family:var(--serif);font-style:italic;font-size:1.05rem;}
+
+/* hero */
+.hero{padding:clamp(4rem,10vw,8rem) clamp(1.25rem,6vw,6rem) clamp(3rem,6vw,5rem);max-width:1000px;}
+.eyebrow{text-transform:uppercase;letter-spacing:.3em;font-size:.75rem;color:var(--purple);font-weight:600;margin-bottom:1.5rem;}
+.hero h1{font-size:clamp(2.6rem,6.5vw,5.4rem);max-width:16ch;color:var(--cream);}
+.hero h1 em{font-style:italic;color:var(--gold);}
+.hero p{margin-top:1.75rem;font-size:1.2rem;opacity:.85;max-width:46ch;}
+
+/* steps */
+.steps{padding:clamp(2rem,5vw,4rem) clamp(1.25rem,6vw,6rem) clamp(4rem,8vw,7rem);max-width:1000px;}
+.step{display:grid;grid-template-columns:120px 1fr;gap:clamp(1.5rem,4vw,3.5rem);padding:clamp(2.5rem,5vw,4rem) 0;border-top:1px solid rgba(201,162,39,.22);align-items:start;}
+.step:first-child{border-top:none;}
+.step-num{font-family:var(--serif);font-size:clamp(3rem,7vw,5rem);color:var(--gold);opacity:.4;line-height:1;}
+.step h2{font-size:clamp(1.7rem,3.5vw,2.6rem);margin-bottom:1rem;max-width:20ch;}
+.step p{opacity:.82;max-width:52ch;font-size:1.08rem;}
+.step .tag{display:inline-block;margin-top:1.25rem;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--purple);font-weight:600;}
+@media (max-width:720px){.step{grid-template-columns:1fr;gap:.5rem;}.step-num{font-size:2.6rem;}}
+
+/* closing */
+.close{padding:clamp(4rem,9vw,8rem) clamp(1.25rem,6vw,6rem);text-align:center;}
+.close .payoff{font-size:clamp(3rem,9vw,6.5rem);color:var(--gold);font-style:italic;font-weight:500;}
+.close p{margin:1.5rem auto 0;max-width:40ch;font-size:1.2rem;opacity:.85;}
+.cta{display:inline-flex;gap:.85rem;align-items:center;margin-top:2.75rem;border:1px solid var(--gold);color:var(--cream);padding:1.1rem 2rem;text-decoration:none;font-weight:600;letter-spacing:.05em;font-size:1rem;transition:background .25s var(--ease),transform .25s var(--ease);}
+.cta:hover{background:rgba(201,162,39,.12);transform:translateY(-2px);}
+.cta .arrow{color:var(--gold);}
+
+/* footer */
+.foot{padding:2.5rem clamp(1.25rem,6vw,6rem) 3.5rem;border-top:1px solid rgba(244,234,222,.1);display:flex;align-items:center;gap:1rem;flex-wrap:wrap;}
+.z-mark-foot{height:28px;opacity:.8;}
+.foot p{font-size:.82rem;opacity:.55;}
+
+/* atmosphere */
+.lamp{position:fixed;width:70vw;height:70vw;max-width:820px;max-height:820px;border-radius:50%;pointer-events:none;filter:blur(12px);z-index:0;animation:breathe 9s var(--ease) infinite alternate;}
+.lamp-1{background:radial-gradient(circle,rgba(123,79,201,.10),transparent 62%);top:-15%;right:-20%;}
+.lamp-2{background:radial-gradient(circle,rgba(201,162,39,.07),transparent 62%);bottom:-20%;left:-18%;animation-delay:3s;}
+@keyframes breathe{from{opacity:.6;transform:scale(.94);}to{opacity:1;transform:scale(1.05);}}
+main,.top,.foot{position:relative;z-index:1;}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .5s var(--ease),transform .5s var(--ease);}
+.reveal.in{opacity:1;transform:none;}
+</style>
+</head>
+<body>
+<div class="lamp lamp-1" aria-hidden="true"></div>
+<div class="lamp lamp-2" aria-hidden="true"></div>
+
+<header class="top">
+  <div class="brand">
+    <img src="assets/z-mark.png" alt="Zentara" class="z-mark">
+    <span class="brand-name">ZENTARA</span>
+  </div>
+  <span class="slogan">your time back.</span>
+</header>
+
+<main>
+  <section class="hero">
+    <p class="eyebrow reveal">How we work</p>
+    <h1 class="reveal">You run your business. <em>We do the rest.</em></h1>
+    <p class="reveal">Here is exactly what happens when you hand your marketing to us. Seven simple steps. Only one of them needs you.</p>
+  </section>
+
+  <section class="steps">
+    <div class="step reveal">
+      <div class="step-num">01</div>
+      <div>
+        <h2>You tell us about your business</h2>
+        <p>You fill out one short form. Who you are, who you want walking through the door, what makes you different. It takes a few minutes and it is the only homework you get.</p>
+        <span class="tag">A few minutes, once</span>
+      </div>
+    </div>
+
+    <div class="step reveal">
+      <div class="step-num">02</div>
+      <div>
+        <h2>We hop on one quick call</h2>
+        <p>Twenty minutes together. We go through your answers, hear how you actually talk about your work, and set you up. This is where your content starts to sound like you and not a robot.</p>
+        <span class="tag">One call, twenty minutes</span>
+      </div>
+    </div>
+
+    <div class="step reveal">
+      <div class="step-num">03</div>
+      <div>
+        <h2>We study what is already winning</h2>
+        <p>We never guess. We dig through your world and find the videos already going viral for businesses like yours, and we look at your own page to see what works and what does not. Every post we make is proven before we make it.</p>
+        <span class="tag">Proof, not guessing</span>
+      </div>
+    </div>
+
+    <div class="step reveal">
+      <div class="step-num">04</div>
+      <div>
+        <h2>You get a free plan</h2>
+        <p>Before you pay a cent, you see a full month mapped out. The hooks, the topics, and the real examples we are building from. If you like it, we start. If you do not, you keep the plan.</p>
+        <span class="tag">Free, no strings</span>
+      </div>
+    </div>
+
+    <div class="step reveal">
+      <div class="step-num">05</div>
+      <div>
+        <h2>We make everything</h2>
+        <p>Reels, posts, and ads built for your business, every week. You do not film, you do not edit, you do not write a word. Unless you want to. This is the part you were dreading and now it is just gone.</p>
+        <span class="tag">You film nothing</span>
+      </div>
+    </div>
+
+    <div class="step reveal">
+      <div class="step-num">06</div>
+      <div>
+        <h2>You give the thumbs up</h2>
+        <p>Every week we send you the batch before anything goes live. You reply good, or ask us to swap something. Prefer to just trust us and skip this? That works too. Your call.</p>
+        <span class="tag">Your content, your say</span>
+      </div>
+    </div>
+
+    <div class="step reveal">
+      <div class="step-num">07</div>
+      <div>
+        <h2>We post it and you grow</h2>
+        <p>We put your content out on your pages, on schedule, so you never touch it. Then you get back to running your shop while the whole town starts learning your name.</p>
+        <span class="tag">We post for you</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="close">
+    <h2 class="payoff reveal">your time back.</h2>
+    <p class="reveal">That is the whole point. You get the customers. We handle the rest.</p>
+    <a class="cta reveal" href="index.html#contact">Get your free plan <span class="arrow">&#8594;</span></a>
+  </section>
+</main>
+
+<footer class="foot">
+  <img src="assets/z-mark.png" alt="" class="z-mark-foot">
+  <p>Zentara &nbsp;&#183;&nbsp; Orange County, California &nbsp;&#183;&nbsp; cal.zentara@gmail.com</p>
+</footer>
+
+<script>
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.15});
+document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%4*50)+'ms';io.observe(el);});
+</script>
+</body>
+</html>
