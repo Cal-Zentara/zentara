@@ -110,6 +110,12 @@ img, video { max-width: 100%; display: block; }
 #glow { position: fixed; top: 0; left: 0; width: 460px; height: 460px; border-radius: 50%; pointer-events: none; z-index: 4; background: radial-gradient(circle, rgba(123,79,201,.12), transparent 65%); transform: translate(-50%, -50%); mix-blend-mode: screen; will-change: transform; }
 @media (hover: none), (prefers-reduced-motion: reduce) { #glow { display: none; } }
 
+/* ---------- Belief statement ---------- */
+#belief { min-height: 0; text-align: center; padding-top: clamp(5rem, 12vw, 11rem); padding-bottom: clamp(5rem, 12vw, 11rem); }
+.belief-line { font-family: var(--serif); font-size: clamp(1.8rem, 4.2vw, 3.4rem); line-height: 1.25; color: var(--cream); }
+.belief-line em { font-style: italic; color: var(--gold); }
+.belief-close { margin-top: 2rem; font-family: var(--sans); font-size: .85rem; letter-spacing: .3em; text-transform: uppercase; color: var(--purple); }
+
 /* ---------- Background atmosphere ---------- */
 #grain { position: fixed; inset: 0; z-index: 60; pointer-events: none; opacity: .05; }
 #grain::before { content: ''; position: absolute; inset: -100%; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)' opacity='0.9'/%3E%3C/svg%3E"); animation: grainShift 1.4s steps(4) infinite; }
