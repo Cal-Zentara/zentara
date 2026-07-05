@@ -3,110 +3,213 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zentara. Your time back.</title>
+<title>Zentara. The whole town is about to know your name.</title>
 <meta name="description" content="Zentara runs your whole online presence. Your business gets famous, you get your time back.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Archivo:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700&family=Archivo:wght@300;400;600;800&family=Archivo+Black&family=Pinyon+Script&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div id="loader"><span class="loader-slogan">your time back.</span></div>
-<div id="glow" aria-hidden="true"></div>
 <div id="grain" aria-hidden="true"></div>
+<div id="stage" aria-hidden="true">
+  <div class="mural" id="m-hero">
+    <div class="pan">
+      <img src="assets/art/hero-fresco.webp" alt="" width="1440" height="1800" fetchpriority="high">
+      <div class="layer-objs">
+        <img class="obj drift-a" src="assets/art/layers/obj-phone.webp" alt="" style="--ox:14%;--oy:18%;--os:.15">
+        <img class="obj drift-b" src="assets/art/layers/obj-tablet.webp" alt="" style="--ox:74%;--oy:12%;--os:.19">
+        <img class="obj drift-c" src="assets/art/layers/obj-bag.webp" alt="" style="--ox:62%;--oy:62%;--os:.12">
+      </div>
+      <span class="dust" style="--x:16%;--y:78%;--d:0s"></span>
+      <span class="dust" style="--x:30%;--y:86%;--d:2.2s"></span>
+      <span class="dust" style="--x:46%;--y:80%;--d:4.6s"></span>
+      <span class="dust" style="--x:60%;--y:90%;--d:1.4s"></span>
+      <span class="dust" style="--x:72%;--y:82%;--d:3.8s"></span>
+      <span class="dust" style="--x:86%;--y:88%;--d:5.4s"></span>
+    </div>
+  </div>
+  <div class="mural" id="m-act1">
+    <div class="pan">
+      <img src="assets/art/layers/act1-bg.webp" alt="" loading="lazy" width="1600" height="900">
+      <div class="layer-objs">
+        <img class="obj drift-b" src="assets/art/layers/obj-phone.webp" alt="" style="--ox:10%;--oy:16%;--os:.1">
+        <img class="obj drift-a" src="assets/art/layers/obj-tablet.webp" alt="" style="--ox:82%;--oy:24%;--os:.13">
+        <img class="obj drift-c" src="assets/art/layers/obj-bag.webp" alt="" style="--ox:70%;--oy:64%;--os:.09">
+      </div>
+      <img class="figure" src="assets/art/layers/act1-figure.webp" alt="" loading="lazy" width="1600" height="900">
+      <span class="dust" style="--x:22%;--y:80%;--d:1.1s"></span>
+      <span class="dust" style="--x:48%;--y:88%;--d:3.4s"></span>
+      <span class="dust" style="--x:78%;--y:84%;--d:5.7s"></span>
+    </div>
+  </div>
+  <div class="mural" id="m-belief">
+    <div class="pan"><video src="assets/art/belief.mp4" poster="assets/art/belief.webp" width="1600" height="900" muted playsinline preload="auto" data-scrub></video>
+      <span class="dust" style="--x:18%;--y:82%;--d:0.6s"></span>
+      <span class="dust" style="--x:55%;--y:90%;--d:2.9s"></span>
+      <span class="dust" style="--x:84%;--y:86%;--d:5.1s"></span>
+    </div>
+  </div>
+  <div class="mural" id="m-act5">
+    <div class="pan"><video src="assets/art/act5-maker.mp4" poster="assets/art/act5-maker.webp" width="1600" height="900" muted playsinline preload="auto" data-scrub></video>
+      <span class="dust" style="--x:26%;--y:86%;--d:1.8s"></span>
+      <span class="dust" style="--x:62%;--y:92%;--d:4.2s"></span>
+      <span class="dust" style="--x:88%;--y:80%;--d:6.5s"></span>
+    </div>
+  </div>
+  <div class="mural" id="m-black"></div>
+</div>
+<nav id="toc" aria-label="Acts">
+  <a href="#hero" data-act="hero">Overture<span>&#8544;</span></a>
+  <a href="#problem" data-act="problem">The Problem<span>&#8545;</span></a>
+  <a href="#belief" data-act="belief">The Belief<span>&#8546;</span></a>
+  <a href="#work" data-act="work">The Proof<span>&#8547;</span></a>
+  <a href="#services" data-act="services">The System<span>&#8548;</span></a>
+  <a href="#story" data-act="story">The Maker<span>&#8549;</span></a>
+  <a href="#contact" data-act="contact">Your Act<span>&#8550;</span></a>
+</nav>
 <main>
-  <section id="hero">
-    <header class="hero-top">
-      <div class="brand">
-        <img src="assets/z-mark.png" alt="Zentara" class="z-mark">
-        <span class="brand-name">ZENTARA</span>
-      </div>
-      <span class="slogan">your time back.</span>
-    </header>
-    <div class="hero-stage">
-      <img src="assets/hero.jpg" alt="A small shop hanging as a masterpiece in a gallery" class="hero-img" fetchpriority="high">
-      <div class="hero-copy">
-        <h1 class="headline"><span>The</span> <span>whole</span> <span>town</span> <span>is</span> <span>about</span> <span>to</span> <span>know</span> <span>your</span> <span>name.</span></h1>
-        <p class="sub">We run your marketing. You run your business. That is the whole deal.</p>
-        <a class="cta" href="#contact">Get your free content plan <span class="arrow">&#8594;</span></a>
-      </div>
+  <section id="hero" data-world="old" data-mural="m-hero">
+<header class="hero-top">
+  <div class="brand">
+    <img src="assets/z-mark.png" alt="Zentara" class="z-mark" width="34" height="34">
+    <span class="brand-name">ZENTARA</span>
+  </div>
+  <span class="hero-slogan">your time back.</span>
+</header>
+<div class="hero-stage">
+  <div class="hero-lines" aria-hidden="true">
+    <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+      <g stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke">
+        <line x1="0" y1="450" x2="1440" y2="450"/>
+        <line x1="720" y1="0" x2="720" y2="900"/>
+        <line x1="0" y1="0" x2="720" y2="450"/><line x1="1440" y1="0" x2="720" y2="450"/>
+        <line x1="0" y1="900" x2="720" y2="450"/><line x1="1440" y1="900" x2="720" y2="450"/>
+        <line x1="0" y1="150" x2="1440" y2="150"/><line x1="0" y1="750" x2="1440" y2="750"/>
+        <line x1="240" y1="0" x2="240" y2="900"/><line x1="1200" y1="0" x2="1200" y2="900"/>
+        <circle cx="720" cy="450" r="330"/><circle cx="720" cy="450" r="560"/>
+      </g>
+    </svg>
+  </div>
+  <div class="hero-frame" aria-hidden="true"></div>
+  <div class="hero-copy">
+    <p class="hero-pre">the new camp<span class="ai">ai</span>gn</p>
+    <h1>The whole town is about to know your name.</h1>
+    <p class="hero-sub">We run your marketing. You run your business. That is the whole deal.</p>
+    <a class="cta" href="#contact">Get your free content plan <span class="arrow">&#8594;</span></a>
+  </div>
+</div>
+<div class="hero-hint" aria-hidden="true">scroll</div>
+  </section>
+  <section id="problem" data-world="old" data-mural="m-act1">
+<p class="act-giant" aria-hidden="true">Unseen</p>
+<div class="act-inner">
+  <span class="act-label reveal">Act I</span>
+  <p class="kicker reveal">The problem</p>
+  <h2 class="reveal">You did not open your shop to fight an algorithm.</h2>
+  <p class="quote reveal dropcap">"I spend more time worrying about what to post than actually running the salon."<br><span class="attr">a salon owner, posted on Reddit, 2026</span></p>
+  <p class="stat reveal">More than half of small business owners run all their marketing alone, on top of the actual job. That is the part we take off your plate.<br><span class="attr">BrightLocal small business report, 2025</span></p>
+</div>
+  </section>
+  <section id="belief" data-world="old" data-mural="m-belief">
+<p class="act-giant" aria-hidden="true">Seen</p>
+<div class="belief-inner">
+  <span class="act-label reveal">Act II</span>
+  <p class="belief-line reveal">Marketing is about getting <em>seen.</em></p>
+  <p class="belief-line reveal">Branding is your <em>voice</em> and your <em>value.</em></p>
+  <p class="belief-close reveal">We build you both.</p>
+</div>
+  </section>
+  <div class="sheet">
+  <section id="work" data-world="new"><p class="act-giant" aria-hidden="true">Proof</p><span class="act-label reveal">Act III</span>
+<p class="kicker reveal">The proof</p>
+<h2 class="reveal dropcap">Real work, posted for real local businesses.</h2>
+<div class="wall">
+  <figure class="piece reveal"><div class="piece-frame"><video src="assets/reels/naildit-1.mp4" muted loop playsinline preload="none"></video></div><figcaption>Nail'd It Spa</figcaption></figure>
+  <figure class="piece reveal"><div class="piece-frame"><video src="assets/reels/salvia-1.mp4" muted loop playsinline preload="none"></video></div><figcaption>Salvia Lion</figcaption></figure>
+  <figure class="piece reveal"><div class="piece-frame"><video src="assets/reels/unik-1.mp4" muted loop playsinline preload="none"></video></div><figcaption>UNIK</figcaption></figure>
+  <figure class="piece reveal"><div class="piece-frame"><video src="assets/reels/naildit-2.mp4" muted loop playsinline preload="none"></video></div><figcaption>Nail'd It Spa</figcaption></figure>
+  <figure class="piece reveal"><div class="piece-frame"><video src="assets/reels/salvia-2.mp4" muted loop playsinline preload="none"></video></div><figcaption>Salvia Lion</figcaption></figure>
+  <figure class="piece reveal"><div class="piece-frame"><video src="assets/reels/unik-2.mp4" muted loop playsinline preload="none"></video></div><figcaption>UNIK</figcaption></figure>
+</div></section>
+  <section id="services" data-world="new"><p class="act-giant" aria-hidden="true">Handled</p><span class="act-label reveal">Act IV</span>
+<p class="kicker reveal">What you get</p>
+<h2 class="reveal dropcap">Your whole online presence, handled.</h2>
+<p class="lead reveal">Not four services to manage. One system that runs itself while you work.</p>
+<div class="sys">
+  <article class="card reveal">
+    <div class="ui ui-post" data-depth="0.5">
+      <div class="ui-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+      <div class="ui-thumb"></div>
+      <div class="ui-line w80"></div><div class="ui-line w55"></div>
+      <div class="ui-chip">scheduled, Tuesday 9:00 AM</div>
     </div>
-  </section>
-  <section id="problem">
-    <div class="lamp lamp-purple" aria-hidden="true"></div>
-    <div class="problem-inner">
-      <p class="kicker reveal">The problem</p>
-      <h2 class="reveal">You did not open your shop to fight an algorithm.</h2>
-      <p class="quote reveal">"I spend more time worrying about what to post than actually running the salon."<br><span class="attr">a salon owner, posted on Reddit, 2026</span></p>
-      <p class="stat reveal">More than half of small business owners run all their marketing alone, on top of the actual job. That is the part we take off your plate.<br><span class="attr">BrightLocal small business report, 2025</span></p>
+    <h3>Content that gets watched</h3>
+    <p>Short videos and posts made for your business, posted every week, built to stop thumbs.</p>
+  </article>
+  <article class="card reveal">
+    <div class="ui ui-ad" data-depth="0.35">
+      <div class="ui-metric"><span class="ui-num">counting</span><span class="ui-cap">your reach, counted live</span></div>
+      <div class="ui-spark" aria-hidden="true"><i style="--h:34%"></i><i style="--h:52%"></i><i style="--h:41%"></i><i style="--h:66%"></i><i style="--h:58%"></i><i style="--h:82%"></i><i style="--h:74%"></i></div>
     </div>
-    <div class="marquee" aria-hidden="true"><div class="marquee-track">
-      <span>reels &nbsp;&#183;&nbsp; ads &nbsp;&#183;&nbsp; posts &nbsp;&#183;&nbsp; websites &nbsp;&#183;&nbsp; bookings &nbsp;&#183;&nbsp; customers &nbsp;&#183;&nbsp; your time back &nbsp;&#183;&nbsp; </span>
-      <span>reels &nbsp;&#183;&nbsp; ads &nbsp;&#183;&nbsp; posts &nbsp;&#183;&nbsp; websites &nbsp;&#183;&nbsp; bookings &nbsp;&#183;&nbsp; customers &nbsp;&#183;&nbsp; your time back &nbsp;&#183;&nbsp; </span>
-    </div></div>
-  </section>
-  <section id="belief">
-    <p class="belief-line reveal">Marketing is about getting <em>seen.</em></p>
-    <p class="belief-line reveal">Branding is your <em>voice</em> and your <em>value.</em></p>
-    <p class="belief-close reveal">We build you both.</p>
-  </section>
-  <section id="work">
-    <div class="lamp lamp-gold" aria-hidden="true"></div>
-    <p class="kicker reveal">The proof</p>
-    <h2 class="reveal">Real work, posted for real local businesses.</h2>
-    <div class="wall">
-      <figure class="tile reveal"><video src="assets/reels/naildit-1.mp4" muted loop playsinline preload="none"></video><figcaption>Nail'd It Spa</figcaption></figure>
-      <figure class="tile reveal"><video src="assets/reels/salvia-1.mp4" muted loop playsinline preload="none"></video><figcaption>Salvia Lion</figcaption></figure>
-      <figure class="tile reveal"><video src="assets/reels/unik-1.mp4" muted loop playsinline preload="none"></video><figcaption>UNIK</figcaption></figure>
-      <figure class="tile reveal"><video src="assets/reels/naildit-2.mp4" muted loop playsinline preload="none"></video><figcaption>Nail'd It Spa</figcaption></figure>
-      <figure class="tile reveal"><video src="assets/reels/salvia-2.mp4" muted loop playsinline preload="none"></video><figcaption>Salvia Lion</figcaption></figure>
-      <figure class="tile reveal"><video src="assets/reels/unik-2.mp4" muted loop playsinline preload="none"></video><figcaption>UNIK</figcaption></figure>
+    <h3>Ads that get customers</h3>
+    <p>Scroll stopping images and videos that make strangers walk in, call, or book.</p>
+  </article>
+  <article class="card reveal">
+    <div class="ui ui-site" data-depth="0.45">
+      <div class="ui-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="ui-url">yourshop.com</span></div>
+      <div class="ui-hero"></div>
+      <div class="ui-line w70"></div><div class="ui-line w45"></div>
     </div>
-  </section>
-  <section id="services">
-    <div class="lamp lamp-purple" aria-hidden="true"></div>
-    <p class="kicker reveal">What you get</p>
-    <h2 class="reveal">Your whole online presence, handled.</h2>
-    <p class="lead reveal">Not four services to manage. One system that runs itself while you work.</p>
-    <div class="sys">
-      <div class="sys-item reveal"><h3>Content that gets watched</h3><p>Short videos and posts made for your business, posted every week, built to stop thumbs.</p></div>
-      <div class="sys-item reveal"><h3>Ads that get customers</h3><p>Scroll stopping images and videos that make strangers walk in, call, or book.</p></div>
-      <div class="sys-item reveal"><h3>A website that works</h3><p>Built, live, and showing up on Google, so people who look for you actually find you.</p></div>
-      <div class="sys-item reveal"><h3>Replies while you sleep</h3><p>Comments and messages answered automatically, leads captured before breakfast.</p></div>
+    <h3>A website that works</h3>
+    <p>Built, live, and showing up on Google, so people who look for you actually find you.</p>
+  </article>
+  <article class="card reveal">
+    <div class="ui ui-chat" data-depth="0.3">
+      <p class="bubble them">Do you have anything open Saturday?</p>
+      <p class="bubble us">We do. Saturday 1:30 or 3:00, which works better?</p>
+      <p class="bubble-time">answered at 11:48 PM, while you slept</p>
     </div>
+    <h3>Replies while you sleep</h3>
+    <p>Comments and messages answered automatically, leads captured before breakfast.</p>
+  </article>
+</div></section>
+  </div>
+  <section id="story" data-world="old" data-mural="m-act5">
+<p class="act-giant" aria-hidden="true">Cal</p>
+<div class="story-grid">
+  <div class="story-photo-wrap reveal">
+    <!-- Cal photo drops in here: <img src="assets/cal.jpg" alt="Cal" class="story-photo"> -->
+    <div class="story-photo-slot"><span>C</span></div>
+  </div>
+  <div class="story-copy">
+    <span class="act-label reveal">Act V</span>
+    <p class="kicker reveal">Who runs this</p>
+    <h2 class="reveal">Fourteen years in construction. Zero marketing school.</h2>
+    <p class="reveal">I am Cal. I spent fourteen years building things with my hands, so I know what a real day of work looks like. Now I build attention for local businesses like yours. No agency suits, no jargon, no fluff. You talk to the person doing the work.</p>
+  </div>
+</div>
   </section>
-  <section id="story">
-    <div class="lamp lamp-gold" aria-hidden="true"></div>
-    <div class="story-grid">
-      <div class="story-photo-wrap reveal">
-        <!-- Cal photo drops in here: <img src="assets/cal.jpg" alt="Cal" class="story-photo"> -->
-        <div class="story-photo-slot"><span>C</span></div>
-      </div>
-      <div class="story-copy">
-        <p class="kicker reveal">Who runs this</p>
-        <h2 class="reveal">Fourteen years in construction. Zero marketing school.</h2>
-        <p class="reveal">I am Cal. I spent fourteen years building things with my hands, so I know what a real day of work looks like. Now I build attention for local businesses like yours. No agency suits, no jargon, no fluff. You talk to the person doing the work.</p>
-      </div>
-    </div>
-  </section>
-  <section id="contact">
-    <div class="lamp lamp-purple" aria-hidden="true"></div>
-    <h2 class="payoff reveal">your time back.</h2>
-    <p class="lead reveal">Tell me about your business. You get a free content plan for it, no strings. If you like it, we talk.</p>
-    <form id="lead-form" action="https://formsubmit.co/cal.zentara@gmail.com" method="POST" class="reveal">
-      <input type="hidden" name="_subject" value="New lead from the Zentara site">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://cal-zentara.github.io/zentara/?sent=1">
-      <label>Your name<input type="text" name="name" required autocomplete="name"></label>
-      <label>Your business<input type="text" name="business" required placeholder="Rosie's Nail Studio, Stanton"></label>
-      <label>What do you need help with?<textarea name="need" rows="4" placeholder="Nobody sees my posts and I have no time to make videos."></textarea></label>
-      <button class="cta" type="submit">Send it <span class="arrow">&#8594;</span></button>
-    </form>
-    <p id="sent-msg" hidden>Got it. Your plan is on the way, check your email in a day or two.</p>
-    <footer class="site-footer">
-      <img src="assets/z-mark.png" alt="" class="z-mark-footer">
-      <p>Zentara &nbsp;&#183;&nbsp; Orange County, California &nbsp;&#183;&nbsp; cal.zentara@gmail.com</p>
-    </footer>
+  <section id="contact" data-world="old" data-mural="m-black">
+<div class="finale-inner">
+  <p class="finale-label reveal">the final act is yours</p>
+  <h2 class="payoff reveal">your time back.</h2>
+  <p class="lead reveal">Tell me about your business. You get a free content plan for it, no strings. If you like it, we talk.</p>
+  <form id="lead-form" action="https://formsubmit.co/cal.zentara@gmail.com" method="POST" class="reveal">
+    <input type="hidden" name="_subject" value="New lead from the Zentara site">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://cal-zentara.github.io/zentara/?sent=1">
+    <label>Your name<input type="text" name="name" required autocomplete="name"></label>
+    <label>Your business<input type="text" name="business" required placeholder="Rosie's Nail Studio, Stanton"></label>
+    <label>What do you need help with?<textarea name="need" rows="4" placeholder="Nobody sees my posts and I have no time to make videos."></textarea></label>
+    <button class="cta" type="submit">Send it <span class="arrow">&#8594;</span></button>
+  </form>
+  <p id="sent-msg" hidden>Got it. Your plan is on the way, check your email in a day or two.</p>
+  <footer class="site-footer">
+    <img src="assets/z-mark.png" alt="" class="z-mark-footer" width="26" height="26">
+    <p>Zentara &nbsp;&#183;&nbsp; Orange County, California &nbsp;&#183;&nbsp; cal.zentara@gmail.com</p>
+  </footer>
+</div>
   </section>
 </main>
 <script src="js/main.js"></script>
